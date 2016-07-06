@@ -1,0 +1,16 @@
+{
+  "name": "gl-cube",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tiansijie",
+  "license": "ISC",
+  "dependencies": {
+    "gl-buffer": "^2.1.2",
+    "gl-context": "^0.1.1",
+    "gl-mat4": "^1.1.4"
+  }
+}
