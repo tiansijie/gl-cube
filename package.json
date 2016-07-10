@@ -1,16 +1,32 @@
 {
   "name": "gl-cube",
   "version": "1.0.0",
-  "description": "",
+  "description": "gl-cube build on stack.gl",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-example": "wzrd ./examples/index.js:./examples/bundle.min.js",
+    "build-example": "browserify ./examples/index.js -o ./examples/bundle.min.js",
+    "watch-example": "watch browserify ./examples/index.js -o ./examples/bundle.min.js"
+  },
+  "browserify": {
+    "transform": [
+      "glslify"
+    ]
   },
   "author": "tiansijie",
   "license": "ISC",
   "dependencies": {
     "gl-buffer": "^2.1.2",
-    "gl-context": "^0.1.1",
     "gl-mat4": "^1.1.4"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "wzrd": "^1.4.0",
+    "gl-context": "^0.1.1",
+    "gl-shader": "^4.0.5",
+    "glslify": "^2.2.1",
+    "gl-clear": "^1.0.0",
+    "canvas-fit": "^1.2.0"
   }
 }

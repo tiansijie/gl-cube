@@ -1,11 +1,12 @@
-var canvas   = document.body.appendChild(document.createElement('canvas'))
-var mat4     = require('gl-mat4')
-var gl       = require('gl-context')(canvas, render)
-var glBuffer = require('gl-buffer')
+var mat4 = require("gl-mat4");
+var glBuffer = require("gl-buffer");
 
-gl.enable(gl.DEPTH_TEST);
+function createCube(gl, cube) {
+  var dimension = cube.dimension;
+  var position = cube.position;
+  var rotation = cube.rotation;
+  var color = cube.color;
 
-function getCube(dimension, position, rotation, color) {
   var cubeMatrix = mat4.create();
   mat4.identity(cubeMatrix, cubeMatrix);
   mat4.translate(cubeMatrix, cubeMatrix, [position.x, position.y, position.z]);
@@ -93,3 +94,4 @@ function getCube(dimension, position, rotation, color) {
 
   return cube;
 }
+module.exports = createCube;
