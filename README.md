@@ -1,6 +1,11 @@
 # gl-cube
 Generate all you need to build an webgl cube based on [stack.gl](http://stack.gl/)
 
+## example
+
+![](cube.png)
+
+
 ## how to use
 ```javascript
 
