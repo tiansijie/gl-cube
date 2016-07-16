@@ -68,9 +68,9 @@ function createCube(gl, cube) {
 
   var generatedColors = [];
 
-  for (j=0; j<colors.length; j++) {
+  for (var j=0; j<colors.length; ++j) {
     var c = colors[j];
-    for (var i=0; i<4; i++) {
+    for (var i=0; i<4; ++i) {
       generatedColors = generatedColors.concat(c);
     }
   }
@@ -84,9 +84,28 @@ function createCube(gl, cube) {
     20, 21, 22,     20, 22, 23    // left
   ];
 
+  var normals = [
+    [0.0, 0.0, 1.0], // Front Side
+    [0.0, 0.0, -1.0], // Back Side
+    [0.0, 1.0, 0.0], // Top Side
+    [0.0,-1.0, 0.0], // Bottom Side
+    [1.0, 0.0, 0.0], // Right Side
+    [-1.0, 0.0, 0.0] // Left Side
+  ];
+
+  var generatedNormals = [];
+
+  for (var j=0; j<normals.length; ++j) {
+    var n = normals[j];
+    for (var i=0; i<4; ++i) {
+      generatedNormals = generatedNormals.concat(n);
+    }
+  }
+
   var cube = {
     vertices: glBuffer(gl, new Float32Array(vertices)),
     colors: glBuffer(gl, new Float32Array(generatedColors)),
+    normals: glBuffer(gl, new Float32Array(generatedNormals)),
     indices: glBuffer(gl, new Uint16Array(vertexIndices), gl.ELEMENT_ARRAY_BUFFER),
     length: 36,
     matrix: cubeMatrix
