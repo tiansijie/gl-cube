@@ -29,6 +29,8 @@ render() {
 	shader.attributes.aPosition.pointer();
 	cube.colors.bind();
 	shader.attributes.aColor.pointer();
+	cube.normals.bind();
+	shader.attributes.aNormal.pointer();
 	cube.indices.bind();
 	gl.drawElements(gl.TRIANGLES, cube.length, gl.UNSIGNED_SHORT, 0);
 	/*......*/
