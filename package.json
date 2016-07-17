@@ -9,6 +9,10 @@
     "build-example": "browserify ./examples/index.js -o ./examples/bundle.min.js",
     "watch-example": "watch browserify ./examples/index.js -o ./examples/bundle.min.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tiansijie/gl-cube.git"
+  },
   "browserify": {
     "transform": [
       "glslify"
