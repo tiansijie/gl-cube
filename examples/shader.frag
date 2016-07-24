@@ -10,5 +10,5 @@ void main() {
   diffuse = vec3(diffuse.x * vColor.x, diffuse.y * vColor.y, diffuse.z * vColor.z);
   diffuse = clamp(diffuse, 0.0, 1.0);
 
-  gl_FragColor = vec4(diffuse, 1.0);
+  gl_FragColor = vec4(diffuse.rgb, vColor.a);
 }

@@ -58,12 +58,12 @@ function createCube(gl, cube) {
 
 
   var colors = [
-    [color.r,  color.g,  color.b,  1.0],
-    [color.r,  color.g,  color.b,  1.0],
-    [color.r,  color.g,  color.b,  1.0],
-    [color.r,  color.g,  color.b,  1.0],
-    [color.r,  color.g,  color.b,  1.0],
-    [color.r,  color.g,  color.b,  1.0]
+    [color.r,  color.g,  color.b,  color.a],
+    [color.r,  color.g,  color.b,  color.a],
+    [color.r,  color.g,  color.b,  color.a],
+    [color.r,  color.g,  color.b,  color.a],
+    [color.r,  color.g,  color.b,  color.a],
+    [color.r,  color.g,  color.b,  color.a]
   ];
 
   var generatedColors = [];

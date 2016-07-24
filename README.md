@@ -16,7 +16,7 @@ var cube = createCube(
 		dimension: {x: 2.0, y: 5.0, z: 2.0},
 		position: {x: 3.5, y: 0.0, z: -9.0},
 		rotation: {x: 0, y: Math.PI / 2, z: 0},
-		color: {r: 0.8, g: 0.1, b: 0.2}
+		color: {r: 0.8, g: 0.1, b: 0.2, a: 1.0}
 	}
 );
 
